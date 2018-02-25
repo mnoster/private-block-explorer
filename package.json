@@ -1,0 +1,56 @@
+{
+  "name": "health",
+  "version": "1.0.0",
+  "description": "health",
+  "main": "health.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "ethereumjs-abi": "^0.6.4",
+    "ethjs": "^0.3.0",
+    "hex2ascii": "0.0.3",
+    "lodash": "^4.17.4",
+    "solidity-sha3": "^0.4.1",
+    "truffle-contract": "^3.0.1",
+    "web3-detect-network": "0.0.15",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
+  },
+  "devDependencies": {
+    "pre-commit": "^1.2.2",
+    "eslint": "^4.5.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.3.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "standard": "^10.0.2"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "context",
+      "before",
+      "beforeEach",
+      "after",
+      "afterEach",
+      "it",
+      "expect"
+    ]
+  }
+}

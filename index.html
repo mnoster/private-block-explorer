@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Health</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-8">
+				<h4>Company</h4>
+				Register Company: <input name="company" value="healthinc"/> &nbsp; Address: <input name="address" value="0xc086bb3c814462f005a58132a2f6856d5a815317"/><br/>
+				<button id="register-button">Register</button>
+				<div style="border:1px solid black; border-radius: 4px; padding:15px;margin-top:40px">
+					<h4>Medicine Record Form</h4>
+					<form id="medicine-form">
+						Medicine Type:<br/> <input name="medicine-type"/><br/>
+						Location:<br/> <input name="location"/><br/>
+						Time:<br/> <input name="time"/><br/>
+						Inventory ID:<br/><input name="inventory-id"/>
+					</form>	
+					<button id="add-button">Add Record</button> &nbsp; 
+					<button id="remove-button">Remove Record</button> &nbsp;
+					<button id="check-button">Check Record</button>	
+				</div>
+				<h3 id="message"></h3>
+				Current tx
+				<pre id="tx"></pre>
+				Change Log &nbsp; |  &nbsp; <span class="blocks"></span> &nbsp; <button id="refresh-button">Refresh</button>
+				<pre><code id="events">Loading...</code></pre>
+			</div>			
+		</div>
+	</div>
+<script type="text/javascript" src="./bundle.js"></script>
+<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+*{
+	font-family: "Open Sans", sans-serif;
+}
+body, html{
+	background: #edecec;
+}
+
+header{
+	background:#5454ce;
+	color:white;
+	width:100%;
+}
+
+header > span{
+	display: inline-block;
+	padding:30px 20px;
+	font-size: 22px;
+	font-family: "Open Sans", sans-serif;
+	text-shadow: 0 1px 3px black;
+}
+
+header input{
+	border-radius: 5px;
+	min-width: 350px;
+	margin:0 !important;
+}
+
+.content-container{
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	margin-top: 30px;
+	padding:45px 25px;
+	box-shadow: 0 0 1px;
+	border-top:3px solid #5454ce;
+	width:100%;
+	background:white;
+	min-height: 600px;
+	border-radius: 2px;
+}
+.content-container > h5 {
+	padding:20px 0;
+	background: #5453ce3d;
+    margin-left: -25px;
+    margin-right: -25px;
+    padding-left: 25px;
+    margin-top: -45px;
+    margin-bottom: 46px;
+    color: #5453ce;
+}
+.content-container > h4{
+	color:#686868
+}
+
+/*.address-field{
+	margin-top:8px;
+}*/
+header span.right-nav{
+	float: right;
+	padding-right: 150px
+}
+
+.tx-info div{
+	padding:15px 0;
+	color:#686868;
+}
+.tx-info div > span{
+	text-decoration: underline;
+}
+
+
+
+
