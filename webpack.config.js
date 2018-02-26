@@ -1,5 +1,5 @@
 module.exports = {
-	 entry: ["./health.js"],
+	 entry: ["./block_explorer.js"],
 	  output: {
 		     filename: "bundle.js"
       },
