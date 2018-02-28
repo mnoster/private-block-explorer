@@ -66,10 +66,14 @@ header span.right-nav {
 	color: #686868;
 }
 
-.tx-info div > span {
+.tx-info div > span:first-of-type {
 	text-decoration: underline;
 }
 
 
+#events{
+	margin-top: 15px; 
+	min-height:100px;
+}
 
 
