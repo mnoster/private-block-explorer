@@ -1,6 +1,6 @@
 # private-block-explorer
 
-##### This transaction explorer consumes an API that makes a request to a server that is connected to private ethereum network.
+#### This transaction explorer consumes an API that makes a request to a server that is connected to private ethereum network.
 
 ###### The server uses Web3 to interact with the contract and calls a getTransaction function, where the input is the transactionHash 
 
