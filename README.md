@@ -13,5 +13,5 @@ _____________________________________________________
 ###### This prototype is functional with the `health_s` repo node server and `health` repo contract deployed on a private network running on AWS EC2.
 
 
-https://s3-us-west-2.amazonaws.com/private-block-explorer/block_explorer.html 
+http://s3-us-west-2.amazonaws.com/private-block-explorer/block_explorer.html 
 
