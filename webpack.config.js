@@ -1,7 +1,8 @@
 module.exports = {
-	 entry: ["./block_explorer.js"],
+	 entry: ["./health.js"],
 	  output: {
-		     filename: "bundle.js"
+	       filename: "bundle.js"
+
       },
        resolve: {
 	       extensions: ['.js', '.es6']

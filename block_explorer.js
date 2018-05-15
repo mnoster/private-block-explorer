@@ -27,9 +27,9 @@ const loadHandlers = () => {
 		$events.innerHTML = lookup()
 	})
 }
-
+//let ip = 54.214.107.168
 const getEventHistory = async () => {
-	let res = await axios.post("http://54.214.107.168:8000/getEventHistory")
+	let res = await axios.post("http://localhost:8000/getEventHistory")
 	events = res.data.events
 	decodedEvents = res.data.decodedEvents
 	console.log(res)
@@ -39,7 +39,7 @@ const lookup = async () => {
 
 	let tx = document.getElementById("tx").value
 	try{
-		let res =  await axios.post("http://54.214.107.168:8000/getTransaction", {tx: tx})
+		let res =  await axios.post("http://localhost:8000/getTransaction", {tx: tx})
 		console.log("res: ", res)
 		populateFields(res.data)
 	}catch(error){

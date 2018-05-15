@@ -5,12 +5,37 @@
   <meta name="viewport" content="width=device-width">
   <title>Health</title>
 </head>
+<style>
+	span.brackets{
+	display:inline-block;
+	color:rgb(214, 0, 214);
+   }
+   span.curly{
+    display:inline-block;
+    color: rgb(255, 0, 0);
+		}
+		span.bool{
+    display:inline-block;
+    color: blue;
+    }
+    span.colon{  
+      display:inline-block;
+      color:red;
+    }
+    span.quotes{
+      display:inline-block;
+      color: #ff00ff;
+    }
+    span.numbers{
+      color:black
+    }
+</style>
 <body>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-8">
 				<h4>Company</h4>
-				Register Company: <input name="company" value="healthinc"/> &nbsp; Address: <input name="address" value="0xc086bb3c814462f005a58132a2f6856d5a815317"/><br/>
+				Register Company: <input name="company" value="mediclub"/> &nbsp; Address: <input name="address" value="0x6f88b0ddfb1ff57e410ca5d93cb4195ffe4d9c03"/><br/>
 				<button id="register-button">Register</button>
 				<div style="border:1px solid black; border-radius: 4px; padding:15px;margin-top:40px">
 					<h4>Medicine Record Form</h4>
@@ -32,6 +57,7 @@
 			</div>			
 		</div>
 	</div>
+<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
 <script type="text/javascript" src="./bundle.js"></script>
 <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>

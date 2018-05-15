@@ -17,18 +17,30 @@ const registerCompany = async () => {
 }
 
 const getEventHistory = async () => {
+	const $events = $("#events")
+
+	$events.html('Fetching...')
+
 	let res = await axios.post("http://localhost:8000/getEventHistory")
-	const $events = document.getElementById("events")
+
 	const $blocks = document.getElementsByClassName("blocks")
-	$events.innerHTML = JSON.stringify(res)
-	$blocks[0].innerHTML = res.data.length + " Blocks"
+	
+	$events.text(JSON.stringify(res, null, 2))
+	$events.highlight(/^0x[a-zA-Z0-9]{40}/, "bool")
+	$events.highlight('"', "quotes")
+	$events.highlight("}", "curly")
+	$events.highlight("{", "curly")
+	$events.highlight(/true|false/, "bool")
+	$events.highlight(/:|,/, "colon")
+
+	$blocks[0].innerHTML = res.data.length + " Transactions"
 	console.log(res)
 }
 
 const formData = () => {
 	let medicineForm = document.getElementById("medicine-form")
 	let record = {
-		address: address || "0xc086bb3c814462f005a58132a2f6856d5a815317",
+		address: address || "0x82b4ac04e5c998f7a87887db4fc8881ddbf02435",
 		company: company || 'healthinc',
 		medType: medicineForm[0].value,
 		location: medicineForm[1].value,
@@ -46,6 +58,7 @@ const addMedicineRecord = async () => {
 		showLog(res)
 	}catch(err){
 		console.log(err)
+		transactionError()
 	}
 }
 
@@ -71,8 +84,18 @@ const showResponse = (res) => {
 }
 
 const showLog = (res) => {
-	const $tx = document.getElementById("tx")
-	$tx.innerHTML = JSON.stringify(res.data.medicine.logs[0])
+	const $tx = $("#tx")
+	console.log("respo: ", res)
+	$tx.text(JSON.stringify(res.data.medicine.logs[0], null, 2))
+
+	$tx.highlight(/^0x[a-zA-Z0-9]{40}/, "bool")
+	$tx.highlight('"', "quotes")
+	$tx.highlight("}", "curly")
+	$tx.highlight("{", "curly")
+	$tx.highlight(/true|false/, "bool")
+	$tx.highlight(/:|,/, "colon")
+	getEventHistory()
+	// $tx.highlight(/[0-9]|%/, "numbers")
 }
 
 
@@ -99,6 +122,20 @@ const loadHandlers = () => {
 		getEventHistory()
 	})
 }
+
+const transactionError = () => {
+	alert("There was an error with your transaction.")
+}
+
+// Syntax highlighting function
+jQuery.fn.highlight = function (str, className) {
+	var regex
+	regex = new RegExp(str, "gi");
+	return this.each(function () {
+	  this.innerHTML = this.innerHTML.replace(regex, function (matched) { return "<span class=\"" + className + "\">" + matched + "</span>"; });
+	});
+  };
+
 
 getEventHistory()
 loadHandlers()
