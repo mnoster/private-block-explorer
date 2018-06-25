@@ -4,7 +4,7 @@
 
 ___
 
-** Point this application's requests to the RPC port of your geth node. Probably port 8545 of server.
+**Point this application's requests to the RPC port of your geth node. Probably port 8545 of server.
 
 ___
 ###### The server uses Web3 to interact with the contract and calls a getTransaction function, where the input is the transactionHash 
